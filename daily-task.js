@@ -9,9 +9,5 @@ function avrage(...num){
 
 console.log(avrage(1,2,3,4,...arr));
 let antarr=[10,11,12,13]
-let merge=[...arr,antarr]
+let merge=[...arr,...antarr]
 console.log(merge);
-
-
-
-
