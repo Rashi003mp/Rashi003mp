@@ -1,0 +1,38 @@
+name: 🦊 Update Fox Contribution Grid
+
+on:
+  schedule:
+    - cron: "0 1 * * *"    # runs daily at 1:00 AM UTC
+  workflow_dispatch:         # lets you run it manually anytime
+  push:
+    branches: [main]         # also runs on every push
+
+jobs:
+  generate-fox:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # needed to commit the SVG back
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate fox SVG with real contribution data
+        env:
+          GH_TOKEN:    ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: Rashi003mp
+          OUTPUT_PATH: fox_contribution.svg
+        run: python generate_fox.py
+
+      - name: Commit and push updated SVG
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add fox_contribution.svg
+          git diff --cached --quiet || git commit -m "🦊 Update fox contribution grid [$(date +'%Y-%m-%d')]"
+          git push
