@@ -183,7 +183,9 @@ Standalone frontend with separate User & Admin modules and complete shopping flo
 
 <br/><br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Rashi003mp&custom_title=Contribution+Timeline&bg_color=0d1117&color=2ea043&line=ff6d00&point=ff6d00&area=true&hide_border=true&radius=6&area_color=161b22" width="95%" />
+<!-- 🦊 Fox contribution animation — fox_contribution.svg lives in repo root -->
+<img src="https://raw.githubusercontent.com/Rashi003mp/Rashi003mp/main/fox_contribution.svg"
+     alt="🦊 Fox eating contributions" width="100%" />
 
 </div>
 
