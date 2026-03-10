@@ -34,7 +34,7 @@ Currently interning at **Bridgeon Solutions LLP**, shipping production features 
 var rashid = new Developer {
     Role     = "Full Stack Developer",
     Location = "Malappuram, Kerala 🇮🇳",
-    Backend  = ["C#", "ASP.NET Core", "EF Core", "SQL Server"],
+    Backend  = ["C#", "ASP.NET Core", "EF Core","Dapper", "SQL Server"],
     Frontend = ["Next.js", "React", "TypeScript", "Tailwind"],
     Focus    = "Clean code · Scalable APIs · Great UX"
 };
